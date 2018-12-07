@@ -2,28 +2,44 @@
 
 <html>
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Async JS</title>
-    <link rel="stylesheet" href="styles.css"/>
-
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Asynchronous Functions</h1>
     <div>
       <h2>Partial Render:</h2>
-      <div id=partial target="_self">
-
-        </div>
+      <p>
+        Since createUser() takes longer to execute than getUsers(), there is
+        only a partial render of the data
+      </p>
+      <br />
+      <div id="partial" class="js_text"></div>
     </div>
-      <script src="./partialRender.js"></script>
-      <div>
-          <h2>Fixed with Callbacks (although slow):</h2>
-          <div id=callback target="_self">
 
-          </div>
-        </div>
+    <div>
+      <h2>Fixed with Callbacks:</h2>
+      <p>
+        Since getUsers() is passed into createUser() as a callback and executed
+        at the end, all the data is rendering!
+      </p>
+      <br />
+      <div id="callback" class="js_text"></div>
+    </div>
+    <div>
+      <h2>Promises:</h2>
+      <div id="promise" class="js_text"></div>
+    </div>
+    <script src="./partialRender.js"></script>
     <script src="./callbacks.js"></script>
+    <script src="./promises.js"></script>
+    <script src="./promise_all.js"></script>
+    <script src="./async_await.js"></script>
+    <script src="./async_await_fetch.js"></script>
+
+
   </body>
 </html>
