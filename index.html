@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Async JS</title>
+    <link rel="stylesheet" href="styles.css"/>
 
   </head>
   <body>
-    <script rel="text/javascript" src="callback.js"></script>
+    <h1>Asynchronous Functions</h1>
+    <div>
+      <h2>Partial Render:</h2>
+      <div id=partial target="_self">
+
+        </div>
+    </div>
+      <script src="./partialRender.js"></script>
+      <div>
+          <h2>Fixed with Callbacks (although slow):</h2>
+          <div id=callback target="_self">
+
+          </div>
+        </div>
+    <script src="./callbacks.js"></script>
   </body>
 </html>
